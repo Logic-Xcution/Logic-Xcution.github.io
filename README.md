@@ -1,4 +1,4 @@
-# Web-Weavers.github.io
+# Logic-Xcution.github.io
 
 This is the repository official website for web wevers
 
@@ -9,7 +9,3 @@ We are a group of people who love to have fun and code. Our motto is to support 
 ## Want to join us
 
 This is an open community, everyone is welcome to join on a condition that they will abide to the code of conduct.
-
-### Join our gitter community
-
-https://gitter.im/Web-Weavers/Learning-Web
