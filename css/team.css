@@ -34,7 +34,9 @@ p {
     right: 10px;
     text-align: center;
     color: white;
-    font-family: 'Open Sans', sans-serif; 
+    /* font-family: 'Open Sans', sans-serif;  */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
 nav{
     background-color: transparent;
@@ -43,14 +45,18 @@ nav{
 .nav-wrapper a{
     /*background-color: transparent;*/
     color: white;
-    font-family: 'Open Sans', sans-serif; 
+    /* font-family: 'Open Sans', sans-serif;  */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
 hr{
     box-shadow: none;
     border:0.5px solid white;
 }
 .main-wrapper{
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
 .main-wrapper p{
     text-align: left;
