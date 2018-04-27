@@ -17,12 +17,12 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
   </head>
 
@@ -231,7 +231,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <!-- <section id="contact">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
@@ -253,6 +253,47 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="my-4">
+            <p class="mb-5">Dont hesitate to send us an email in case of any query or feedback</p>
+          </div>
+        </div>
+        <div class="row">
+            <form action="/sendMail" style="width: 100%;" method="POST">
+                <div id="mobile30" class="text-center col-xs-12 col-sm-6 offset-sm-3 ">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="name" name="name" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" name="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" name="message" rows="5" id="message"></textarea>
+                    </div>
+                    <button type="submit" id="sendMailBTN" class="btn btn-dark btn-xl sr-button">Submit</button>
+                </div>
+            </form>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div style="width: 100%;">
+          <div class="text-center">
+              <h5>Copyright <i class="far fa-copyright"></i> Logic Xcution 2018</h5>
+          </div>
+      </div>
     </section>
 
     <!-- Bootstrap core JavaScript -->
@@ -265,7 +306,7 @@
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
+    <script src="js/creative.js"></script>
 
   </body>
 
