@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="logic-xcution-code-of-conduct">Logic-Xcution | Code Of Conduct</h1>
+<ul>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-open-source-citizenship">2. Open Source Citizenship</a></li>
+<li><a href="#3-expected-behavior">3. Expected Behavior</a></li>
+<li><a href="#4-unacceptable-behavior">4. Unacceptable Behavior</a></li>
+<li><a href="#5-consequences-of-unacceptable-behavior">5. Consequences of Unacceptable Behavior</a></li>
+<li><a href="#6-reporting-guidelines">6. Reporting Guidelines</a></li>
+<li><a href="#7-addressing-grievances">7. Addressing Grievances</a></li>
+<li><a href="#8-scope">8. Scope</a></li>
+<li><a href="#9-contact">9. Contact</a></li>
+</ul>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>This is to bring notice to everyone who wants to participate or become a member of Logic-Xcution community, he/she must not share any sort of pirated material/resource to the group. If found doing so, he/she will be removed from the community and we, Logic-Xcution do not own any of that pirated content, so that person alone will be liable to the legal proceedures which may follow.</p>
+<p><a href="./Disclaimer.md"><strong>Read the full disclaimer here</strong></a></p>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>A primary goal of this  Code of Conduct for Logic-Xcution is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, ethnicity, socioeconomic status, and religion (or lack thereof).</p>
+<p>This code of conduct outlines our expectations for all those who participate in our community, as well as the consequences for unacceptable behavior.</p>
+<p>We invite all those who participate in the Logic-Xcution to help us create safe and positive experiences for everyone.</p>
+<h2 id="2-open-source-citizenship">2. Open Source Citizenship</h2>
+<p>A supplemental goal of this Code of Conduct is to increase open source citizenship by encouraging participants to recognize and strengthen the relationships between our actions and their effects on our community.</p>
+<p>Communities mirror the societies in which they exist and positive action is essential to counteract the many forms of inequality and abuses of power that exist in society.</p>
+<p>If you see someone who is making an extra effort to ensure our community is welcoming, friendly, and encourages all participants to contribute to the fullest extent, we want to know.</p>
+<h2 id="3-expected-behavior">3. Expected Behavior</h2>
+<p>The following behaviors are expected and requested of all community members:</p>
+<ul>
+<li>
+<p>Participate in an authentic and active way. In doing so, you contribute to the health and longevity of this community.</p>
+</li>
+<li>
+<p>Exercise consideration and respect in your speech and actions.</p>
+</li>
+<li>
+<p>Attempt collaboration before conflict.</p>
+</li>
+<li>
+<p>Refrain from demeaning, discriminatory, or harassing behavior and speech.</p>
+</li>
+<li>
+<p>Be mindful of your surroundings and of your fellow participants. Alert community leaders if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential.</p>
+</li>
+</ul>
+<h2 id="4-unacceptable-behavior">4. Unacceptable Behavior</h2>
+<p>The following behaviors are considered harassment and are unacceptable within our community:</p>
+<ul>
+<li>
+<p>Violence, threats of violence or violent language directed against another person.</p>
+</li>
+<li>
+<p>Sharing of pirated resources is highly prohibited. If you find anyone doing this, please let any of the admins know.</p>
+</li>
+<li>
+<p>Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.</p>
+</li>
+<li>
+<p>Posting or displaying sexually explicit or violent material.</p>
+</li>
+<li>
+<p>Posting or threatening to post other people’s personally identifying information (&quot;doxxing&quot;).
+Personal insults, particularly those related to gender, sexual orientation, race, religion, or disability.</p>
+</li>
+<li>
+<p>Inappropriate photography or recording.</p>
+</li>
+<li>
+<p>Deliberate intimidation, stalking or following (online or in person).</p>
+</li>
+<li>
+<p>Advocating for, or encouraging, any of the above behavior.</p>
+</li>
+</ul>
+<h2 id="5-consequences-of-unacceptable-behavior">5. Consequences of Unacceptable Behavior</h2>
+<p>Unacceptable behavior from any community member, including sponsors and those with decision-making authority, will not be tolerated.</p>
+<p>Anyone asked to stop unacceptable behavior is expected to comply immediately.</p>
+<p>If a community member engages in unacceptable behavior, the community organizers may take any action they deem appropriate, up to and including a temporary ban or permanent expulsion from the community without warning.</p>
+<h2 id="6-reporting-guidelines">6. Reporting Guidelines</h2>
+<p>If you are subject to or witness unacceptable behavior, or have any other concerns, please notify a community organizer as soon as possible.</p>
+<h2 id="7-addressing-grievances">7. Addressing Grievances</h2>
+<p>If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify one of the organizers with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies.</p>
+<h2 id="8-scope">8. Scope</h2>
+<p>We expect all community participants (contributors; sponsors; and other guests) to abide by this Code of Conduct in all community venues–online and in-person–as well as in all one-on-one communications pertaining to community business.</p>
+<p>This code of conduct and its related procedures also applies to unacceptable behavior occurring outside the scope of community activities when such behavior has the potential to adversely affect the safety and well-being of community members.</p>
+<h2 id="9-contact">9. Contact</h2>
+<p>Facebook: https://www.facebook.com/LogicXcution/</p>
+<p>Gmail: logicxcution@gmail.com</p>
+
+</body>
+</html>
